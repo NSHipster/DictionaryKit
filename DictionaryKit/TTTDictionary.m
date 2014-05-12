@@ -29,7 +29,6 @@ NSString * const DCSDutchDictionaryName = @"Prisma woordenboek Nederlands";
 NSString * const DCSFrenchDictionaryName = @"Multidictionnaire de la langue française";
 NSString * const DCSGermanDictionaryName = @"Duden-Wissensnetz deutsche Sprache";
 NSString * const DCSItalianDictionaryName = @"Dizionario italiano da un affiliato di Oxford University Press";
-NSString * const DCSJapaneseDictionaryName = @"アップル1 apple りんご。「―-ジュース」〈子項目〉アップルパイ";
 NSString * const DCSJapaneseSupaDaijirinDictionaryName = @"スーパー大辞林";
 NSString * const DCSJapanese_EnglishDictionaryName = @"ウィズダム英和辞典 / ウィズダム和英辞典";
 NSString * const DCSKoreanDictionaryName = @"New Ace Korean Language Dictionary";
