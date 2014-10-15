@@ -59,7 +59,7 @@ extern CFStringRef DCSDictionaryGetName(DCSDictionaryRef dictionary);
 extern CFArrayRef DCSCopyRecordsForSearchString(DCSDictionaryRef dictionary, CFStringRef string, void *, void *);
 
 extern CFDictionaryRef DCSCopyDefinitionMarkup(DCSDictionaryRef dictionary, CFStringRef record);
-extern CFStringRef DCSRecordCopyData(CFTypeRef record, int version);
+extern CFStringRef DCSRecordCopyData(CFTypeRef record, long version);
 extern CFStringRef DCSRecordCopyDataURL(CFTypeRef record);
 extern CFStringRef DCSRecordGetAnchor(CFTypeRef record);
 extern CFStringRef DCSRecordGetAssociatedObj(CFTypeRef record);
@@ -92,7 +92,7 @@ extern CFStringRef DCSRecordGetTitle(CFTypeRef record);
         self.text = (__bridge_transfer NSString*)DCSCopyTextDefinition(dictionary, (__bridge CFStringRef)self.headword, CFRangeMake(0, CFStringGetLength((__bridge CFStringRef)self.headword)));
     }
     
-    self.HTML = (__bridge_transfer NSString *)DCSRecordCopyData(record, (int)TTTDictionaryVersionHTMLWithPopoverCSS);
+    self.HTML = (__bridge_transfer NSString *)DCSRecordCopyData(record, (long)TTTDictionaryVersionHTMLWithPopoverCSS);
 
     return self;
 }
