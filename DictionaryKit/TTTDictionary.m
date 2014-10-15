@@ -42,6 +42,13 @@ NSString * const DCSSimplifiedChinese_EnglishDictionaryName = @"Oxford Chinese D
 NSString * const DCSSpanishDictionaryName = @"Diccionario General de la Lengua Española Vox";
 NSString * const DCSWikipediaDictionaryName = @"Wikipedia";
 
+typedef NS_ENUM(NSInteger, TTTDictionaryRecordVersion) {
+    TTTDictionaryVersionHTML = 0,
+    TTTDictionaryVersionHTMLWithAppCSS = 1,
+    TTTDictionaryVersionHTMLWithPopoverCSS = 2,
+    TTTDictionaryVersionText = 3,
+};
+
 #pragma mark -
 
 extern CFArrayRef DCSCopyAvailableDictionaries();
@@ -85,8 +92,7 @@ extern CFStringRef DCSRecordGetTitle(CFTypeRef record);
         self.text = (__bridge_transfer NSString*)DCSCopyTextDefinition(dictionary, (__bridge CFStringRef)self.headword, CFRangeMake(0, CFStringGetLength((__bridge CFStringRef)self.headword)));
     }
     
-    int version = 0x2; // HTML + CSS
-    self.HTML = (__bridge_transfer NSString *)DCSRecordCopyData(record, version);
+    self.HTML = (__bridge_transfer NSString *)DCSRecordCopyData(record, (int)TTTDictionaryVersionHTMLWithPopoverCSS);
 
     return self;
 }
