@@ -9,7 +9,7 @@
 ```objective-c
 #import "DictionaryKit.h"
 
-TTTDictionary *dictionary = [TTTDictionary dictionaryNamed:DCSOxfordEnglishDictionary];
+TTTDictionary *dictionary = [TTTDictionary dictionaryNamed:DCSOxfordDictionaryOfEnglish];
 NSLog(@"%@\n", dictionary.name);
 
 NSString *term = @"apple";
