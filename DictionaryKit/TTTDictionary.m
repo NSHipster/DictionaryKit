@@ -89,7 +89,7 @@ extern CFStringRef DCSRecordGetTitle(CFTypeRef record);
 
     self.headword = (__bridge NSString *)DCSRecordGetHeadword(record);
     if (self.headword) {
-        self.text = (__bridge_transfer NSString*)DCSCopyTextDefinition(dictionary, (__bridge CFStringRef)self.headword, CFRangeMake(0, CFStringGetLength((__bridge CFStringRef)self.headword)));
+        self.text = (__bridge_transfer NSString*)DCSRecordCopyData(record, TTTDictionaryVersionText);
     }
     
     self.HTML = (__bridge_transfer NSString *)DCSRecordCopyData(record, (long)TTTDictionaryVersionHTMLWithPopoverCSS);
