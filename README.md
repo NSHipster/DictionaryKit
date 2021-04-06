@@ -40,10 +40,9 @@ NSString * const DCSSpanishDictionaryName = @"Diccionario General de la Lengua E
 NSString * const DCSWikipediaDictionaryName = @"Wikipedia";
 ~~~
 
-### Contact
+### Author
 
-[Mattt Thompson](http://github.com/mattt)
-[@mattt](https://twitter.com/mattt)
+Mattt ([@mattt](https://twitter.com/mattt))
 
 ## License
 
